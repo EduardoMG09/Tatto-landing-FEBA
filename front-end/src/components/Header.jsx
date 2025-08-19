@@ -1,17 +1,20 @@
 import React from "react";
 import '../styles/HomeL.css'
-import Navbar from "./Navbar";
-import img from "/alas-tatuaje.png"
+import Gallery from "../components/Gallery.jsx"
 
 function Header(){
+
     return (
-        <div className="container-home-2">
-            <div className="container-header">
-                <div className="navbar-home">
-                    <Navbar/>
+        <div className="container-header-home">
+            <div className="container-main-header">
+                <div className="frase-header">
+                    FEBA's tattos House
                 </div>
-                <div className="imagen-header">
-                    <img src={img} alt="" />
+                <div className="slide-imagenes">
+                    <Gallery 
+                    autoplay={true}
+                    pauseOnHover={true}
+                    />
                 </div>
             </div>
         </div>
