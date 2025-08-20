@@ -142,3 +142,9 @@
     justify-content: center;
     padding: 1vh 0;
 }
+
+/*--------servicios*/
+.servicios{
+    width: 100%;
+    display: flex;
+}
