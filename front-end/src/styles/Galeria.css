@@ -1,0 +1,31 @@
+.wall-container {
+  column-count: 7; /* Número de columnas */
+  column-gap: 1vh; /* Espacio entre columnas */
+  width: 100%;
+  margin: auto;
+}
+
+.wall-img {
+  break-inside: avoid; /* Evita que la imagen se divida entre columnas */
+  margin-bottom: 1rem;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.wall-img img {
+  width: 100%;
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+/* Efecto hover */
+.wall-img:hover img {
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.wall-img:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}

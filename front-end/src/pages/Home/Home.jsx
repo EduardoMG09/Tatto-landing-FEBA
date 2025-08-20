@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../components/Header";
 import Navbar from "../../components/Navbar"
+import Galeria from "../../components/Galeria"
 import "../../styles/HomeL.css"
 
 function Home(){
@@ -11,6 +12,9 @@ function Home(){
             </div>
             <div className="header">
                 <Header />
+            </div>
+            <div className="galeria">
+                <Galeria />
             </div>
         </div>
     )

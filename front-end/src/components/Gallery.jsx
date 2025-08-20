@@ -1,16 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, useMotionValue, useAnimation, useTransform } from "motion/react";
 import "../styles/Gallery.css";
-import img1 from "/t1.jpg"
-import img2 from "/t2.jpg"
-import img3 from "/t3.jpg"
-import img4 from "/t4.jpg"
-import img5 from "/t5.jpg"
-import img6 from "/t6.jpg"
+import img1 from "/t1.jpg";
+import img2 from "/t2.jpg";
+import img3 from "/t3.jpg";
+import img4 from "/t4.jpg";
+import img5 from "/t5.jpg";
+import img6 from "/t6.jpg";
 
-
-const IMGS = [
-      img1,img2,img3,img4,img5,img6]
+const IMGS = [img1, img2, img3, img4, img5, img6];
 
 const Gallery = ({ autoplay = false, pauseOnHover = false, images = [] }) => {
   images = IMGS;
@@ -46,10 +44,10 @@ const Gallery = ({ autoplay = false, pauseOnHover = false, images = [] }) => {
       autoplayRef.current = setInterval(() => {
         controls.start({
           rotateY: rotation.get() - (360 / faceCount),
-          transition: { duration: 2, ease: "linear" },
+          transition: { duration: 4, ease: "linear" }, // ⬅️ Animación más lenta
         });
         rotation.set(rotation.get() - (360 / faceCount));
-      }, 2000);
+      }, 4000); // ⬅️ Intervalo más largo
 
       return () => clearInterval(autoplayRef.current);
     }
@@ -75,17 +73,17 @@ const Gallery = ({ autoplay = false, pauseOnHover = false, images = [] }) => {
     if (autoplay && pauseOnHover) {
       controls.start({
         rotateY: rotation.get() - (360 / faceCount),
-        transition: { duration: 2, ease: "linear" },
+        transition: { duration: 4, ease: "linear" },
       });
       rotation.set(rotation.get() - (360 / faceCount));
 
       autoplayRef.current = setInterval(() => {
         controls.start({
           rotateY: rotation.get() - (360 / faceCount),
-          transition: { duration: 2, ease: "linear" },
+          transition: { duration: 4, ease: "linear" },
         });
         rotation.set(rotation.get() - (360 / faceCount));
-      }, 2000);
+      }, 4000);
     }
   };
 
@@ -97,7 +95,8 @@ const Gallery = ({ autoplay = false, pauseOnHover = false, images = [] }) => {
         <motion.div
           drag="x"
           className="gallery-track"
-          onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
           style={{
             transform: transform,
             rotateY: rotation,

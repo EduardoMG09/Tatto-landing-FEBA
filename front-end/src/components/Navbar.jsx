@@ -5,8 +5,10 @@ import "../styles/Home.css";
 function Navbar(){
     const opciones = {
         "Home":"/home",
-        "Catalogo":"/catalogo",
-        "Agenda":"/agenda",
+        "Galeria":"/galeria",
+        "Nosotros":"/nosotros",
+        "Servicios":"/servicios",
+        "Blog":"experiencias",
         "Contacto":"/contacto"
     }
 
@@ -15,7 +17,7 @@ function Navbar(){
             <div className="itemsnavbar-2">
                 {
                     Object.entries(opciones).map( ([item,info],index)=>(
-                        <Link to={info}>
+                        <Link to={info} key={index}>
                             <div key={index} className="item-navbar-2">{item}</div>
                         </Link>
                     ))
