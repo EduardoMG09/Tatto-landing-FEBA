@@ -1,65 +1,74 @@
 .tilted-card-figure {
   position: relative;
-  width: 100%;
-  height: 100%;
-  perspective: 800px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.tilted-card-mobile-alert {
-  position: absolute;
-  top: 1rem;
-  text-align: center;
-  font-size: 0.875rem;
-  display: none;
-}
-
-@media (max-width: 640px) {
-  .tilted-card-mobile-alert {
-    display: block;
-  }
-  .tilted-card-caption {
-    display: none;
-  }
+  perspective: 1000px;
+  margin: 20px;
+  font-family: "DM Sans", sans-serif;
 }
 
 .tilted-card-inner {
   position: relative;
-  transform-style: preserve-3d;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.35);
+  cursor: pointer;
+  background-color: #000;
 }
 
 .tilted-card-img {
-  position: absolute;
-  top: 0;
-  left: 0;
+  border-radius: 20px;
   object-fit: cover;
-  border-radius: 15px;
-  will-change: transform;
-  transform: translateZ(0);
+  filter: brightness(60%);
 }
 
-.tilted-card-overlay {
+.tilted-card-overlay-content {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
-  will-change: transform;
-  transform: translateZ(30px);
-}
-
-.tilted-card-caption {
-  pointer-events: none;
-  position: absolute;
-  left: 0;
-  top: 0;
-  border-radius: 4px;
-  background-color: #fff;
-  padding: 4px 10px;
-  font-size: 10px;
-  color: #2d2d2d;
+  height: 100%;
+  width: 100%;
+  padding: 5vh 2vh 2vh 2vh;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.85));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scrollbar-width: thin;
   opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.tilted-card-inner:hover .tilted-card-overlay-content {
+  opacity: 1;
+}
+
+.tilted-card-overlay-content h4,
+.tilted-card-overlay-content h5 {
+  margin: 5px 0;
+  color: #ffcc00;
+}
+
+.tilted-card-overlay-content ul {
+  margin-top: 5px;
+  padding-left: 15px;
+  list-style: disc;
+}
+
+.paquete {
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 5px;
+}
+.tilted-card-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2vh 3vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: start;
   z-index: 3;
+  border-radius: 0 0 15px 15px;
 }

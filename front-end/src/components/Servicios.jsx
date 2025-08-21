@@ -1,8 +1,12 @@
 import React from "react";
-import Servicio from "./Servicio";
+import TiltedCard from "./TiltedCard";
 import "../styles/Servicios.css"
+import img1 from "/s1.png";
+import img2 from "/s2.png";
+import img3 from "/s3.png";
 
 function Servicios(){
+    const imagenes = [img1,img2,img3];
     const serviciosTatuajes = {
         pequeño: {
             definicion: "Hasta 5 cm aproximadamente",
@@ -61,9 +65,9 @@ function Servicios(){
                 "Tatuaje grande",
                 "Diseño detallado y estilo personalizado",
                 "Consulta previa + múltiples ajustes de diseño",
-                "Fotos profesionales y seguimiento de sesiones"
+                "Fotos profesionales"
                 ],
-                descripcion: "Paquete completo para tatuajes grandes, con diseño único y soporte durante todas las sesiones."
+                descripcion: "Paquete completo, con diseño único y soporte durante todas las sesiones."
             }
             }
         }
@@ -72,20 +76,26 @@ function Servicios(){
     return(
         <div className="container-servicios">
             <div className="titulo-servicios">
-                Servicios
+                Paquetes
             </div>
             <div className="servicios-cards">
                 {
                     Object.entries(serviciosTatuajes).map(([item,info],index) => (
-                        <Servicio 
+                        <TiltedCard 
                         key={index}
+                        imageSrc={imagenes[index % imagenes.length]}
+                        altText={`Imagen de ${item}`}
+                        captionText={item}
+                        containerHeight="85vh"
+                        containerWidth="93%"
+                        imageHeight="100%"
+                        imageWidth="100%"
                         titulo={item}
-                        definicion= {info.definicion}
-                        zonas= {info.zonas}
-                        tiempo= {info.tiempo}
-                        precio= {info.precio}
+                        definicion={info.definicion}
+                        zonas={info.zonas}
+                        tiempo={info.tiempo}
                         estiloSugerido={info.estiloSugerido}
-                        paquetes= {info.paquetes}
+                        paquetes={info.paquetes}
                         />
                     ))
                 }

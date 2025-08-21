@@ -11,17 +11,18 @@ const springValues = {
 export default function TiltedCard({
   imageSrc,
   altText = "Tilted card image",
-  captionText = "",
-  containerHeight = "300px",
-  containerWidth = "100%",
-  imageHeight = "300px",
-  imageWidth = "300px",
-  scaleOnHover = 1.1,
+  containerHeight = "400px",
+  containerWidth = "350px",
+  imageHeight = "400px",
+  imageWidth = "350px",
+  scaleOnHover = 1.05,
   rotateAmplitude = 14,
-  showMobileWarning = true,
-  showTooltip = true,
-  overlayContent = null,
-  displayOverlayContent = false,
+  titulo,
+  definicion,
+  zonas = [],
+  tiempo,
+  precio,
+  paquetes = {},
 }) {
   const ref = useRef(null);
 
@@ -85,12 +86,6 @@ export default function TiltedCard({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {showMobileWarning && (
-        <div className="tilted-card-mobile-alert">
-          This effect is not optimized for mobile. Check on desktop.
-        </div>
-      )}
-
       <motion.div
         className="tilted-card-inner"
         style={{
@@ -101,6 +96,7 @@ export default function TiltedCard({
           scale,
         }}
       >
+        {/* Imagen de fondo */}
         <motion.img
           src={imageSrc}
           alt={altText}
@@ -111,28 +107,50 @@ export default function TiltedCard({
           }}
         />
 
-        {displayOverlayContent && overlayContent && (
-          <motion.div
-            className="tilted-card-overlay"
-          >
-            {overlayContent}
-          </motion.div>
-        )}
-      </motion.div>
+        {/* Título siempre visible */}
+        <div className="tilted-card-title">
+          {titulo}
+        </div>
 
-      {showTooltip && (
-        <motion.figcaption
-          className="tilted-card-caption"
-          style={{
-            x,
-            y,
-            opacity,
-            rotate: rotateFigcaption,
-          }}
+        {/* Overlay con info detallada */}
+        <motion.div
+          className="tilted-card-overlay-content"
+          initial={{ opacity: 0, y: 40 }}
+          whileHover={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4 }}
         >
-          {captionText}
-        </motion.figcaption>
-      )}
+          <div className="definicion">
+            <h4>Experiencia:</h4>
+            <p>{definicion}</p>
+          </div>
+          <div className="zonas">
+            <strong>Zonas:</strong>
+            <ul>
+              {zonas.map((zona, index) => (
+                <li key={index}>{zona}</li>
+              ))}
+            </ul>
+          </div>
+          <div className="tiempo">{tiempo}</div>
+          <div className="precio">
+            <strong>Precio:</strong> {precio}
+          </div>
+          <div className="paquetes">
+            {Object.entries(paquetes).map(([tipo, datos], index) => (
+              <div key={index} className="paquete">
+                <h5>{tipo.charAt(0).toUpperCase() + tipo.slice(1)}</h5>
+                <p>{datos.descripcion}</p>
+                <p><strong>Sesiones:</strong> {datos.sesiones}</p>
+                <ul>
+                  {datos.incluye.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+      </motion.div>
     </figure>
   );
 }
