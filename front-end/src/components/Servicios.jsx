@@ -6,7 +6,7 @@ import img2 from "/s2.png";
 import img3 from "/s3.png";
 
 function Servicios(){
-    const imagenes = [img1,img2,img3];
+    const imagenes = [img3,img2,img1];
     const serviciosTatuajes = {
         pequeño: {
             definicion: "Hasta 5 cm aproximadamente",

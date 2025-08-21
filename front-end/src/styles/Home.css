@@ -142,3 +142,94 @@
   border-bottom: 3px solid #c4aa97;
 }
 
+/* Teléfonos pequeños (vertical, < 576px) */
+@media (max-width: 768px) {
+  /* Ajustes para móviles pequeños */
+  .container-main{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .navbar-place{
+    grid-area: 1/1/2/4;    
+  }
+  .item-navbar{
+    font-size: 2vh;
+    padding: 1vh 2vh;
+    margin: 0 1vh;
+  }
+  .negocio-nombre{
+    width: 90%;
+    padding: 2vh 1vh;
+  }
+  .negocio-nombre h1{
+    font-size: 4vh;
+  }
+  .card {
+    width: 100%;
+    padding: 1vh 2vh;
+  }
+}
+
+/* Tablets verticales (768px – 991px) */
+@media (min-width: 769px) and (max-width: 991px) {
+  /* Ajustes para tablets */
+  .container-main{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .navbar-place{
+    grid-area: 1/1/2/5;;    
+  }
+  .item-navbar{
+    font-size: 2vh;
+    padding: 1vh 2vh;
+    margin: 0 1vh;
+  }
+  .negocio-nombre{
+    width: 90%;
+    padding: 2vh 1vh;
+  }
+  .negocio-nombre h1{
+    font-size: 4vh;
+  }
+  .card {
+    width: 100%;
+    padding: 1vh 2vh;
+  }
+}
+
+/* Tablets horizontales y laptops pequeñas (992px – 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Ajustes para pantallas medianas */
+  .container-main{
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .navbar-place{
+    grid-area: 1/2/2/4;
+  }
+  .item-navbar{
+    font-size: 2.5vh;
+    padding: 1vh 2vh;
+    margin: 0 1vh;
+  }
+  .negocio-nombre{
+    width: 70%;
+    padding: 2vh 1vh;
+  }
+  .negocio-nombre h1{
+    font-size: 5vh;
+  }
+  .card {
+    width: 100%;
+    padding: 1vh 2vh;
+  }
+}
+
+/* Laptops grandes y desktop (1200px – 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  /* Ajustes para pantallas grandes */
+
+}
+
+/* Monitores grandes (≥ 1400px) */
+@media (min-width: 1400px) {
+  /* Ajustes para pantallas muy grandes */
+}

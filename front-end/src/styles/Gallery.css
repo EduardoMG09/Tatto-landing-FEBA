@@ -50,11 +50,15 @@
 }
 
 @media (max-width: 768px) {
+  .gallery-container{
+    margin: 1vh 0;
+    height: 40vh;
+  }
   .gallery-item {
-    padding: 6%;
+    padding: 1vh;
   }
   .gallery-img {
-    height: 100px;
-    width: 220px;
+    height: 90%;
+    width: 20vh;
   }
 }
