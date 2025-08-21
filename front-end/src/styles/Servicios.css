@@ -7,3 +7,51 @@
     background-color: black;
     padding: 2vh;
 }
+.titulo-servicios{
+    font-size: 3rem;
+    font-family: "DM Sans", sans-serif;
+    margin: 1vh;
+    padding: 1vh;
+}
+.servicios-cards{
+    padding: 1vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+/*-------Servicio*/
+.container-servicio{
+    border: 1px solid white;
+    padding: 2vh 4vh;
+    margin: 1vh;
+    border-radius: 20px;
+    font-family: "DM Sans", sans-serif;
+}
+.titulo{
+    font-size: 1.2rem;
+}
+.des-servicio{
+    display: flex;
+    flex-direction: column;
+}
+.zonas-servicio{
+
+}
+.tiempo-servicio{
+
+}
+.paquetes-servicio{
+
+}
+.precio{
+
+
+}
+.paquetes-servicio ul li, .seccion-servicio ul li{
+    margin-left: 5vh;
+}
+.seccion-servicio{
+    margin: 0 0 2vh 0;
+}

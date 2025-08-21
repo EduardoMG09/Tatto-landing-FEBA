@@ -4,7 +4,7 @@ import WallGallery from "./Wall-gallery";
 function Galeria(){
     return(
         <div className="container-galeria">
-            <div className="titulo">
+            <div className="titulo-seccion">
                 <div className="sub">
                     My Gallery
                 </div>

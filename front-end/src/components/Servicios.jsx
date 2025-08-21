@@ -1,12 +1,14 @@
 import React from "react";
+import Servicio from "./Servicio";
 import "../styles/Servicios.css"
 
 function Servicios(){
     const serviciosTatuajes = {
-        pequeno: {
+        pequeño: {
             definicion: "Hasta 5 cm aproximadamente",
             zonas: ["Muñeca", "Tobillo", "Detrás de la oreja", "Dedos", "Cuello lateral"],
             tiempo: "30 minutos – 1 hora",
+            precio: "A partir de $500.00",
             paquetes: {
             basico: {
                 incluye: ["Tatuaje pequeño", "Diseño personalizado simple", "Sesión única"],
@@ -27,6 +29,7 @@ function Servicios(){
             definicion: "Entre 5 y 15 cm aproximadamente",
             zonas: ["Brazo", "Pierna", "Hombro", "Espalda alta", "Pecho lateral"],
             tiempo: "1 – 3 horas",
+            precio: "A partir de $1000.00",
             paquetes: {
             basico: {
                 incluye: ["Tatuaje mediano", "Diseño personalizado", "Sesión de 1 a 2 horas"],
@@ -47,6 +50,7 @@ function Servicios(){
             definicion: "Más de 15 cm",
             zonas: ["Espalda completa", "Pierna completa", "Pecho completo", "Brazo completo (manga)"],
             tiempo: "3 – 6 horas o más (varias sesiones)",
+            precio: "A partir de $1650.00",
             paquetes: {
             basico: {
                 incluye: ["Tatuaje grande", "Diseño personalizado", "Sesión según tamaño"],
@@ -73,9 +77,16 @@ function Servicios(){
             <div className="servicios-cards">
                 {
                     Object.entries(serviciosTatuajes).map(([item,info],index) => (
-                        <div className="item-servicio" key={index}>
-                            {item}
-                        </div>
+                        <Servicio 
+                        key={index}
+                        titulo={item}
+                        definicion= {info.definicion}
+                        zonas= {info.zonas}
+                        tiempo= {info.tiempo}
+                        precio= {info.precio}
+                        estiloSugerido={info.estiloSugerido}
+                        paquetes= {info.paquetes}
+                        />
                     ))
                 }
             </div>
