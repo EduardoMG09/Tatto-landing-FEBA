@@ -11,7 +11,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    font-size: 4rem;
+    font-size: 7vh;
     font-family: "DM Sans", sans-serif;
     margin: 1vh;
     border-radius: 10px;
@@ -62,4 +62,39 @@
 }
 .seccion-servicio{
     margin: 0 0 2vh 0;
+}
+
+/* Teléfonos pequeños (vertical, < 576px) */
+@media (max-width:  768px) {
+  /* Ajustes para móviles grandes */
+    .titulo-servicios{
+        font-size: 3vh;
+    }
+    .servicios-cards{
+        grid-template-columns: auto;
+        grid-template-rows: repeat(3, 1fr);
+}
+}
+
+/* Tablets verticales (768px – 991px) */
+@media (min-width: 769px) and (max-width: 991px) {
+  /* Ajustes para tablets */
+    .titulo-servicios{
+        font-size: 4vh;
+    }
+}
+
+/* Tablets horizontales y laptops pequeñas (992px – 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+  /* Ajustes para pantallas medianas */
+}
+
+/* Laptops grandes y desktop (1200px – 1399px) */
+@media (min-width: 1200px) and (max-width: 1399px) {
+  /* Ajustes para pantallas grandes */
+}
+
+/* Monitores grandes (≥ 1400px) */
+@media (min-width: 1400px) {
+  /* Ajustes para pantallas muy grandes */
 }

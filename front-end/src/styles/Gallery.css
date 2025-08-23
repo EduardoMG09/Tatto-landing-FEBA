@@ -48,7 +48,7 @@
   transition: 0.3s ease;
   opacity: 0.4;
 }
-
+/*-----------media querys--------------*/
 @media (max-width: 768px) {
   .gallery-container{
     margin: 1vh 0;
@@ -60,5 +60,54 @@
   .gallery-img {
     height: 90%;
     width: 20vh;
+  }
+}
+@media (min-width: 769px) and (max-width: 991px) {
+  .gallery-content{
+    margin: 0 0;
+    height: 80vh;
+  }
+  .gallery-item{
+    padding: 1vh;
+  }
+  .gallery-img{
+    height: 50vh;
+    width: 25vh;
+  }
+}
+
+/* Tablets horizontales y laptops pequeñas (992px – 1199px) */
+@media (min-width: 992px) and (max-width: 1300px) {
+  /* Ajustes para pantallas medianas */
+   .gallery-item{
+    margin: 0 2vh;
+  }
+  .gallery-img{
+    height: 55vh;
+    width: 35vh;
+  }
+}
+
+/* Laptops grandes y desktop (1200px – 1399px) */
+@media (min-width: 1300px) and (max-width: 1399px) {
+  /* Ajustes para pantallas grandes */
+   .gallery-item{
+    margin: 0 2vh;
+  }
+  .gallery-img{
+    height: 60vh;
+    width: 30vh;
+  }
+}
+
+/* Monitores grandes (≥ 1400px) */
+@media (min-width: 1400px) {
+  /* Ajustes para pantallas muy grandes */
+  .gallery-item{
+    margin: 0 2vh;
+  }
+  .gallery-img{
+    height: 60vh;
+    width: 25vh;
   }
 }

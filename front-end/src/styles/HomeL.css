@@ -190,21 +190,109 @@
         width: 80%;
         display: flex;
     }
+    .sub{
+        font-size: 3vh;
+    }
+    .sub-2{
+        font-size: 1.5vh;
+        padding: 0.5vh 0;
+    }
 }
 
 /* Tablets verticales (768px – 991px) */
 @media (min-width: 769px) and (max-width: 991px) {
   /* Ajustes para tablets */
+    .nvbar{
+        width: 100%;
+    }
+    .itemsnavbar-2{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .item-navbar-2{
+        font-size: 2vh;
+        padding: 1vh 1vh;
+        margin: 0 1vh;
+    }
+    .container-header-home .container-main-header{
+        flex-direction: column;
+        align-items: center;
+    }
+    .frase-header{
+        width: 100%;
+        text-align: center;
+        padding: 1vh 0;
+    }
+    .texts{
+        margin-top: 6vh;
+        margin-bottom: 7vh;
+    }
+    .texts .name-tattos{
+        font-size: 5vh;
+        padding: 0 0.5vh;
+    }
+    .buttons-options .button{
+        padding: 1.5vh 4vh;
+        font-size: 1.7vh;
+    }
+    .slide-imagenes{
+        width: 95%;
+        display: flex;   
+    }
+    .sub{
+        font-size: 4vh;
+    }
+    .sub-2{
+        padding: 0.5vh 0;
+    }
 }
 
 /* Tablets horizontales y laptops pequeñas (992px – 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
   /* Ajustes para pantallas medianas */
+  .texts{
+        margin-top: 6vh;
+        margin-bottom: 7vh;
+    }
+    .texts .name-tattos{
+        font-size: 5vh;
+        padding: 0 0.5vh;
+    }
+    .buttons-options .button{
+        padding: 1.5vh 4vh;
+        font-size: 1.7vh;
+    }
+    .sub{
+        font-size: 4vh;
+    }
+    .sub-2{
+        padding: 0.5vh 0;
+    }
 }
 
 /* Laptops grandes y desktop (1200px – 1399px) */
 @media (min-width: 1200px) and (max-width: 1399px) {
   /* Ajustes para pantallas grandes */
+  .texts{
+        margin-top: 6vh;
+        margin-bottom: 7vh;
+    }
+    .texts .name-tattos{
+        font-size: 5vh;
+        padding: 0 0.5vh;
+    }
+    .buttons-options .button{
+        padding: 1.5vh 4vh;
+        font-size: 1.7vh;
+    }
+    .sub{
+        font-size: 4vh;
+    }
+    .sub-2{
+        padding: 0.5vh 0;
+    }
 }
 
 /* Monitores grandes (≥ 1400px) */
