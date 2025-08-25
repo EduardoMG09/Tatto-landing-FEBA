@@ -24,9 +24,11 @@
 .itemsnavbar-2{
     display: flex;
     width: 70%;
+    background-color: transparent;
 }
 .itemsnavbar-2 a{
     text-decoration: none;
+    background-color: transparent;
 }
 .item-navbar-2{
     color: #fff;
@@ -34,7 +36,9 @@
     font-size: 3vh;
     margin: 0 1vh;
     padding: 1vh 3vh;
+    border: none;
     border-radius: 20px;
+    background-color: transparent;
     transition: 0.3s ease;
 }
 .item-navbar-2:hover{

@@ -5,8 +5,6 @@ import "../styles/Home.css";
 function NavbarLanding(){
     const opciones = {
         "Home":"/home",
-        "Catalogo":"/catalogo",
-        "Agenda":"/agenda"
     }
 
     return(
